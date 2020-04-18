@@ -44,11 +44,11 @@
             </div>
             <div class="menu-mobile">
                 <a href="#"><i class="fa fa-bars"></i></a>
-                <img src="images/logo-mobile.svg" alt="logo-mobile">
+                <img src="images/logo-mobile.svg" alt="Foodies le magazine">
             </div>
         </nav>
         <header>
-            <img src="images/logo-desktop.svg" alt="logo-desktop">
+            <img src="images/logo-desktop.svg" alt="Foodies le magazine">
         </header>
 
         <div class="page">
@@ -59,13 +59,19 @@
 
                 <aside>
                     <div class="auteur">
-                        <img src="" alt="">
+                        <div class="profil-auteur">
+                            <img src="images/profil-auteure.svg" alt="Photo de Myriam Gauthier Fréchette">
+                        </div>
                         <h4><span>Myriam</span></h4>
                         <h4>Gauthier Fréchette</h4>
                     </div>
-                    <div class="pubs pub-desktop">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                    <div class="pubs-desktop">
+                        <div class="pubs pub-desktop-1">
+                            <p>Publicité</p>
+                        </div>
+                        <div class="pubs pub-desktop-2">
+                            <p>Publicité</p>
+                        </div>
                     </div>
                 </aside>
 
@@ -88,7 +94,11 @@
 
                     <h2>Du bonheur à partager en famille et entre amis</h2>
                     <figure>
-                        <img src="" alt="">
+                        <picture>
+                            <source media="(min-width: 1366px)" srcset="images/potluck/potluck-960.jpg">
+                            <source media="(min-width: 768px)" srcset="images/potluck/potluck-640.jpg">
+                            <img src="images/potluck/potluck-600.jpg" alt="Préparation d'un potluck">
+                        </picture>
                         <figcaption>Photo de Josh Frenette</figcaption>
                     </figure>
                     <p>Integer tristique magna eu neque convallis, a efficitur ipsum rutrum. Vivamus bibendum lobortis
@@ -98,7 +108,7 @@
                         a. Mauris rhoncus tristique ornare. Vivamus pulvinar lacinia velit eu sagittis.</p>
 
                     <div class="pubs pub-mobile-1">
-                        <img src="" alt="">
+                        <p>Publicité</p>
                     </div>
 
                     <h2>Des suggestions de plats à apporter</h2>
@@ -111,12 +121,17 @@
                         semper massa aliquet at. Ut venenatis consequat dapibus.</p>
 
                     <div class="pubs pub-mobile-2">
-                        <img src="" alt="">
+                        <p>Publicité</p>
                     </div>
 
                     <div class="recettes">
                         <div class="recette-01">
-                            <img src="" alt="">
+                            <img class="img-recette" alt="Photo d'une salade de crevettes"
+                                src="images/recettes/recette01-320.jpg" srcset="
+                                images/recettes/recette01-320.jpg 320w,
+                                images/recettes/recette01-400.jpg 400w,
+                                images/recettes/recette01-600.jpg 600w"
+                                sizes="(min-width: 768px) 35vw, (min-width: 1366px) 29vw, 80vw">
                             <div class="info-recette">
                                 <h3>Salade de crevettes de saison</h3>
                                 <p>Eleifend sit amet ipsum quis, aliquam luctus neque. In vitae justo ut risus volutpat
@@ -127,7 +142,12 @@
                         </div>
 
                         <div class="recette-02">
-                            <img src="" alt="">
+                            <img class="img-recette" alt="Photo d'une salade de tomates"
+                                src="images/recettes/recette02-320.jpg" srcset="
+                                images/recettes/recette02-320.jpg 320w,
+                                images/recettes/recette02-400.jpg 400w,
+                                images/recettes/recette02-600.jpg 600w"
+                                sizes="(min-width: 768px) 35vw, (min-width: 1366px) 29vw, 80vw">
                             <div class="info-recette">
                                 <h3>Une salade de tomates fraîches</h3>
                                 <p>Porta vitae magna eget, vestibulum molestie lacus. Class aptent taciti sociosqu ad
@@ -142,7 +162,12 @@
                         </div>
 
                         <div class="recette-03">
-                            <img src="" alt="">
+                            <img class="img-recette" alt="Photo de petits sandwichs"
+                                src="images/recettes/recette03-320.jpg" srcset="
+                                images/recettes/recette03-320.jpg 320w,
+                                images/recettes/recette03-400.jpg 400w,
+                                images/recettes/recette03-600.jpg 600w"
+                                sizes="(min-width: 768px) 35vw, (min-width: 1366px) 29vw, 80vw">
                             <div class="info-recette">
                                 <h3>De petits sandwichs tout simples</h3>
                                 <p>Eleifend sit amet ipsum quis, aliquam luctus neque. In vitae justo ut risus volutpat
@@ -161,4 +186,5 @@
     </div>
 
 </body>
+
 </html>
