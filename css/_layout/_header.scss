@@ -3,3 +3,17 @@
 //                   // HEADER //                     //
 //                   _header.scss                     //
 //----------------------------------------------------//
+
+/*////[Code SCSS du header]
+________________________________________________________*/
+
+header{
+    width: 100vw;
+    height: 420px;
+    background-image: url(../images/header/header-960.jpg);
+    background-size: cover;
+    background-position: center;
+    & > img{
+        display: none;
+    }
+}
