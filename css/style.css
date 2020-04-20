@@ -80,4 +80,23 @@ a:visited {
   text-decoration: none;
   color: inherit;
 }
+
+/*////[Variable de couleurs]
+________________________________________________________*/
+:root {
+  /*[Blanc]*/
+  --blanc: hsl(0, 0%, 100%);
+  /*[Noir]*/
+  --noir: hsl(0, 0%, 0%);
+  /*[Orangés]*/
+  --orange: hsl(12, 100%, 64%);
+  --orange-pale: hsl(22, 79%, 82%);
+  /*[Gris]*/
+  --gris: hsl(0, 0%, 24%);
+  --gris-pale: hsl(0, 0%, 60%);
+  --gris-fonce: hsl(0, 0%, 13%);
+  /*[Verts]*/
+  --vert: hsl(67, 40%, 61%);
+  --vert-fonce: hsl(67, 25%, 47%);
+}
 /*# sourceMappingURL=style.css.map */
