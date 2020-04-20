@@ -59,7 +59,6 @@ ________________________________________________________*/
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 
@@ -100,6 +99,15 @@ ________________________________________________________*/
   --vert-fonce: hsl(67, 25%, 47%);
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.interface {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 /*////[Code SCSS du header]
 ________________________________________________________*/
 header {
@@ -111,6 +119,81 @@ header {
 }
 
 header > img {
+  display: none;
+}
+
+/*////[Code SCSS de l'article]
+________________________________________________________*/
+.page {
+  width: 100%;
+}
+
+.page > .contenu-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: .6em;
+  /*[Zone verte]*/
+  /*[Aside]*/
+}
+
+.page > .contenu-page > .zone-verte {
+  background-color: var(--vert);
+  padding: 1em;
+}
+
+.page > .contenu-page > .zone-verte > h4 {
+  color: var(--blanc);
+  font-size: 1.5rem;
+}
+
+.page > .contenu-page > aside {
+  padding: 1.5em;
+  /*[Section de l'auteur]*/
+  /*[Pubs pour desktop]*/
+}
+
+.page > .contenu-page > aside > .auteur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.page > .contenu-page > aside > .auteur > .profil-auteur {
+  width: 15vw;
+  border: 2px solid var(--orange-pale);
+}
+
+.page > .contenu-page > aside > .auteur > .nom-auteur {
+  margin-left: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page > .contenu-page > aside > .auteur > .nom-auteur h4:first-child {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: .2em;
+}
+
+.page > .contenu-page > aside > .auteur > .nom-auteur h4:last-child {
+  color: var(--gris);
+}
+
+.page > .contenu-page > aside > .pubs-desktop {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */

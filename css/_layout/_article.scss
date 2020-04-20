@@ -1,0 +1,63 @@
+//----------------------------------------------------//
+//                                                    //
+//                  // ARTICLE //                     //
+//                  _article.scss                     //
+//----------------------------------------------------//
+
+/*////[Code SCSS de l'article]
+________________________________________________________*/
+
+.page {
+    width: 100%;
+
+    &>.contenu-page {
+        @include flex-column;
+        padding: .6em;
+
+        /*[Zone verte]*/
+        &>.zone-verte {
+            background-color: var(--vert);
+            padding: 1em;
+
+            &>h4 {
+                color: var(--blanc);
+                font-size: 1.5rem;
+            }
+        }
+
+        /*[Aside]*/
+        &>aside {
+            padding: 1.5em;
+
+            /*[Section de l'auteur]*/
+            &>.auteur {
+                @include flex-row;
+
+                &>.profil-auteur {
+                    width: 15vw;
+                    border: 2px solid var(--orange-pale);
+
+                    
+                }
+                & > .nom-auteur {
+                    margin-left: 0.5rem;
+                    @include flex-column;
+                    & h4:first-child{
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                        padding-bottom: .2em;
+                    }
+                    & h4:last-child{
+                        color: var(--gris);
+                    }
+                }
+
+            }
+
+            /*[Pubs pour desktop]*/
+            &>.pubs-desktop {
+                display: none;
+            }
+        }
+    }
+}
