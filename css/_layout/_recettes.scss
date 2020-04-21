@@ -1,0 +1,61 @@
+//----------------------------------------------------//
+//                                                    //
+//                   // RECETTES //                   //
+//                  _recettes.scss                    //
+//----------------------------------------------------//
+
+/*////[Code SCSS de la section des recettes]
+________________________________________________________*/
+
+.recettes {
+    font-size: .95rem;
+    width: 100%;
+
+    h3 {
+        font-weight: 500;
+        color: var(--gris);
+        font-size: 1.3rem;
+
+        margin: {
+            top: 1.2rem;
+            bottom: 0.5rem;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .recette-01::after,
+    .recette-02::after {
+        content: " ";
+        display: block;
+        height: 1.8px;
+        background: var(--noir);
+        width: 100%;
+        margin: 3rem 0;
+        opacity: 10%;
+    }
+
+    .info-recette {
+        @include flex-column;
+
+        .bouton {
+            margin: {
+                top: 2rem;
+                bottom: .2rem;
+            }
+
+            font-weight: 500;
+            color: var(--blanc);
+            background-color: var(--vert);
+            border: none;
+            padding: .6rem 1.5rem;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 10px;
+            align-self: center;
+        }
+    }
+}
