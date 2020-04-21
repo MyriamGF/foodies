@@ -99,7 +99,7 @@ ________________________________________________________*/
   --vert-fonce: hsl(67, 25%, 47%);
 }
 
-/*////[Mixin pour flex]
+/*////[Mixins pour flex]
 ________________________________________________________*/
 /*[Display flex en colonne]*/
 /*[Display flex en rangée]*/
@@ -111,20 +111,6 @@ body > .interface {
   margin: 0 auto;
   overflow: hidden;
   font-weight: 300;
-}
-
-/*////[Code SCSS du footer]
-________________________________________________________*/
-footer {
-  width: 100%;
-  background-color: var(--gris-fonce);
-  color: var(--blanc);
-  padding: 1.3rem 4rem;
-  font-weight: 500;
-  font-size: .9rem;
-  text-align: center;
-  line-height: 1.3rem;
-  margin-top: 4rem;
 }
 
 /*////[Code SCSS du header]
@@ -175,7 +161,6 @@ ________________________________________________________*/
 .page > .contenu-page > aside, .page > .contenu-page > article {
   padding: 1.2em;
   /*[Section de l'auteur]*/
-  /*[Pubs pour desktop]*/
 }
 
 .page > .contenu-page > aside > .auteur, .page > .contenu-page > article > .auteur {
@@ -217,10 +202,6 @@ ________________________________________________________*/
 .page > .contenu-page > aside > .auteur > .nom-auteur h4:last-child, .page > .contenu-page > article > .auteur > .nom-auteur h4:last-child {
   color: var(--gris);
   font-weight: 500;
-}
-
-.page > .contenu-page > aside > .pubs-desktop, .page > .contenu-page > article > .pubs-desktop {
-  display: none;
 }
 
 .page > .contenu-page > article {
@@ -265,12 +246,14 @@ ________________________________________________________*/
   font-weight: 500;
 }
 
-.page > .contenu-page > article > .recettes {
+/*////[Code SCSS de la section des recettes]
+________________________________________________________*/
+.recettes {
   font-size: .95rem;
   width: 100%;
 }
 
-.page > .contenu-page > article > .recettes h3 {
+.recettes h3 {
   font-weight: 500;
   color: var(--gris);
   font-size: 1.3rem;
@@ -278,12 +261,12 @@ ________________________________________________________*/
   margin-bottom: 0.5rem;
 }
 
-.page > .contenu-page > article > .recettes img {
+.recettes img {
   width: 100%;
 }
 
-.page > .contenu-page > article > .recettes .recette-01::after,
-.page > .contenu-page > article > .recettes .recette-02::after {
+.recettes .recette-01::after,
+.recettes .recette-02::after {
   content: " ";
   display: block;
   height: 1.8px;
@@ -293,7 +276,7 @@ ________________________________________________________*/
   opacity: 10%;
 }
 
-.page > .contenu-page > article > .recettes .info-recette {
+.recettes .info-recette {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,7 +286,7 @@ ________________________________________________________*/
           flex-direction: column;
 }
 
-.page > .contenu-page > article > .recettes .info-recette .bouton {
+.recettes .info-recette .bouton {
   margin-top: 2rem;
   margin-bottom: .2rem;
   font-weight: 500;
@@ -318,5 +301,26 @@ ________________________________________________________*/
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+/*////[Code SCSS des publicités]
+________________________________________________________*/
+/*[Pubs pour desktop]*/
+.pubs-desktop {
+  display: none;
+}
+
+/*////[Code SCSS du footer]
+________________________________________________________*/
+footer {
+  width: 100%;
+  background-color: var(--gris-fonce);
+  color: var(--blanc);
+  padding: 1.3rem 4rem;
+  font-weight: 500;
+  font-size: .9rem;
+  text-align: center;
+  line-height: 1.3rem;
+  margin-top: 4rem;
 }
 /*# sourceMappingURL=style.css.map */
