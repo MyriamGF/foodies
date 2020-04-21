@@ -113,6 +113,20 @@ body > .interface {
   font-weight: 300;
 }
 
+/*////[Code SCSS du footer]
+________________________________________________________*/
+footer {
+  width: 100%;
+  background-color: var(--gris-fonce);
+  color: var(--blanc);
+  padding: 1.3rem 4rem;
+  font-weight: 500;
+  font-size: .9rem;
+  text-align: center;
+  line-height: 1.3rem;
+  margin-top: 4rem;
+}
+
 /*////[Code SCSS du header]
 ________________________________________________________*/
 header {
