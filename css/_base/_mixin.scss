@@ -4,12 +4,17 @@
 //                    _mixin.scss                     //
 //----------------------------------------------------//
 
-@mixin flex-column{
+/*////[Mixin pour flex]
+________________________________________________________*/
+
+/*[Display flex en colonne]*/
+@mixin flex-column {
     display: flex;
     flex-direction: column;
 }
 
-@mixin flex-row{
+/*[Display flex en rangée]*/
+@mixin flex-row {
     display: flex;
     flex-direction: row;
 }

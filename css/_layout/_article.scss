@@ -22,41 +22,148 @@ ________________________________________________________*/
             &>h4 {
                 color: var(--blanc);
                 font-size: 1.5rem;
+                font-weight: 500;
             }
         }
 
         /*[Aside]*/
         &>aside {
-            padding: 1.5em;
+            padding: 1.2em;
 
             /*[Section de l'auteur]*/
             &>.auteur {
                 @include flex-row;
 
                 &>.profil-auteur {
-                    width: 15vw;
                     border: 2px solid var(--orange-pale);
+                    padding: 0;
 
-                    
+                    &>img {
+                        width: 10vw;
+                    }
                 }
-                & > .nom-auteur {
+
+                &>.nom-auteur {
                     margin-left: 0.5rem;
                     @include flex-column;
-                    & h4:first-child{
-                        font-weight: bold;
+
+                    & h4:first-child {
+                        font-weight: 700;
                         font-size: 1.1rem;
                         padding-bottom: .2em;
                     }
-                    & h4:last-child{
+
+                    & h4:last-child {
                         color: var(--gris);
+                        font-weight: 500;
                     }
                 }
-
             }
 
             /*[Pubs pour desktop]*/
             &>.pubs-desktop {
                 display: none;
+            }
+        }
+
+        /*[Article]*/
+        &>article {
+            @extend aside;
+            line-height: 1.6;
+
+            h1 {
+                font-size: 2.3rem;
+                font-weight: 300;
+                line-height: 1;
+            }
+
+            h2 {
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: var(--orange);
+
+                margin: {
+                    top: 2rem;
+                    bottom: 0.5rem;
+                }
+            }
+
+            h4 {
+                color: var(--gris-pale);
+                font-weight: 500;
+            }
+
+            &>p:first-of-type {
+                padding: 1em;
+                font-style: italic;
+                text-align: center;
+
+            }
+
+            & figure {
+                margin: 2rem 0;
+
+                img {
+                    width: 100%;
+                }
+
+                figcaption {
+                    font-size: .9rem;
+                    font-weight: 500;
+                }
+            }
+
+            &>.recettes {
+                font-size: .95rem;
+                width: 100%;
+
+                h3 {
+                    font-weight: 500;
+                    color: var(--gris);
+                    font-size: 1.3rem;
+
+                    margin: {
+                        top: 1.2rem;
+                        bottom: 0.5rem;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                .recette-01::after,
+                .recette-02::after {
+                    content: " ";
+                    display: block;
+                    height: 1.8px;
+                    background: var(--noir);
+                    width: 100%;
+                    margin: 3rem 0;
+                    opacity: 10%;
+                }
+
+                .info-recette {
+                    @include flex-column;
+
+                    .bouton {
+                        margin: {
+                            top: 2rem;
+                            bottom: .2rem;
+                        }
+
+                        font-weight: 500;
+                        color: var(--blanc);
+                        background-color: var(--vert);
+                        border: none;
+                        padding: .6rem 1.5rem;
+                        text-align: center;
+                        display: inline-block;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        align-self: center;
+                    }
+                }
             }
         }
     }

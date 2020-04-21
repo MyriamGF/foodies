@@ -6,9 +6,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-}
 
-.interface {
-    margin: 0 auto;
-    overflow: hidden;
+    &>.interface {
+        margin: 0 auto;
+        overflow: hidden;
+        font-weight: 300;
+    }
 }
