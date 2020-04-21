@@ -11,5 +11,10 @@ body {
         margin: 0 auto;
         overflow: hidden;
         font-weight: 300;
+        @include flex-row;
+
+        &>.page {
+            width: 100%;
+        }
     }
 }

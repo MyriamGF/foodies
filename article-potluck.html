@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bibliothèque jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Icônes (Font Awesome) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Polices -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <title>Le potluck, recevoir sans se casser la tête</title>
@@ -17,41 +20,37 @@
 <body>
 
     <div class="interface">
-
-        <nav class="nav-principale">
-
-            <div class="onglets">
-                <ul class="nav-liste">
-                    <a href='#'>
-                        <li>Recettes</li>
-                    </a>
-                    <a href='#'>
-                        <li>Accords mets-vins</li>
-                    </a>
-                    <a href='#'>
-                        <li>Accords mets-bières</li>
-                    </a>
-                    <a href='#'>
-                        <li>Foodtrotter</li>
-                    </a>
-                    <a href='#'>
-                        <li>Coup de food</li>
-                    </a>
-                    <a href='#'>
-                        <li>Art de recevoir</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="menu-mobile">
-                <a href="#"><i class="fa fa-bars"></i></a>
-                <img src="images/logo-mobile.svg" alt="Foodies le magazine">
-            </div>
+        <nav class="nav-principale nav-mobile nav-ferme">
+            <ul class="nav-liste">
+                <a href='#'>
+                    <li>Recettes</li>
+                </a>
+                <a href='#'>
+                    <li>Accords mets-vins</li>
+                </a>
+                <a href='#'>
+                    <li>Accords mets-bières</li>
+                </a>
+                <a href='#'>
+                    <li>Foodtrotter</li>
+                </a>
+                <a href='#'>
+                    <li>Coup de food</li>
+                </a>
+                <a href='#'>
+                    <li>Art de recevoir</li>
+                </a>
+            </ul>
         </nav>
-        <header>
-            <img src="images/logo-desktop.svg" alt="Foodies le magazine">
-        </header>
 
         <div class="page">
+            <div class="menu-mobile">
+                <a class="btn-hamburger" href="#"><i class="fa fa-bars"></i></a>
+                <img src="images/logo-mobile.svg" alt="Foodies le magazine">
+            </div>
+            <header>
+                <img src="images/logo-desktop.svg" alt="Foodies le magazine">
+            </header>
             <div class="contenu-page">
                 <div class="zone-verte">
                     <h4>Collaboration spéciale</h4>
@@ -181,10 +180,11 @@
                     </div>
                 </article>
             </div>
+            <footer>
+                <p class="copyright">©CSTJ | Techniques d'intégration multimédia 2020 - travail de mi-session</p>
+            </footer>
         </div>
-        <footer>
-            <p class="copyright">©CSTJ | Techniques d'intégration multimédia 2020 - travail de mi-session</p>
-        </footer>
+
     </div>
 
 </body>

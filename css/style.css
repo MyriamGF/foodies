@@ -11,7 +11,7 @@ acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup,
 tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody, tfoot, thead,
-tr, th, td, article, aside, .page > .contenu-page > article, canvas, details, embed, figure,
+tr, th, td, article, aside, .contenu-page > article, canvas, details, embed, figure,
 figcaption, footer, header, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
   margin: 0;
@@ -23,7 +23,7 @@ section, summary, time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, .page > .contenu-page > article, details, figcaption, figure, footer, header, menu, nav, section {
+article, aside, .contenu-page > article, details, figcaption, figure, footer, header, menu, nav, section {
   display: block;
 }
 
@@ -111,8 +111,21 @@ body > .interface {
   margin: 0 auto;
   overflow: hidden;
   font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
+body > .interface > .page {
+  width: 100%;
+}
+
+/*////[Code SCSS de la navigation mobile et desktop]
+________________________________________________________*/
 /*////[Code SCSS du header]
 ________________________________________________________*/
 header {
@@ -129,11 +142,8 @@ header > img {
 
 /*////[Code SCSS de l'article]
 ________________________________________________________*/
-.page {
+.contenu-page {
   width: 100%;
-}
-
-.page > .contenu-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,23 +157,23 @@ ________________________________________________________*/
   /*[Article]*/
 }
 
-.page > .contenu-page > .zone-verte {
+.contenu-page > .zone-verte {
   background-color: var(--vert);
   padding: 1em;
 }
 
-.page > .contenu-page > .zone-verte > h4 {
+.contenu-page > .zone-verte > h4 {
   color: var(--blanc);
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-.page > .contenu-page > aside, .page > .contenu-page > article {
+.contenu-page > aside, .contenu-page > article {
   padding: 1.2em;
   /*[Section de l'auteur]*/
 }
 
-.page > .contenu-page > aside > .auteur, .page > .contenu-page > article > .auteur {
+.contenu-page > aside > .auteur, .contenu-page > article > .auteur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,16 +183,16 @@ ________________________________________________________*/
           flex-direction: row;
 }
 
-.page > .contenu-page > aside > .auteur > .profil-auteur, .page > .contenu-page > article > .auteur > .profil-auteur {
+.contenu-page > aside > .auteur > .profil-auteur, .contenu-page > article > .auteur > .profil-auteur {
   border: 2px solid var(--orange-pale);
   padding: 0;
 }
 
-.page > .contenu-page > aside > .auteur > .profil-auteur > img, .page > .contenu-page > article > .auteur > .profil-auteur > img {
+.contenu-page > aside > .auteur > .profil-auteur > img, .contenu-page > article > .auteur > .profil-auteur > img {
   width: 10vw;
 }
 
-.page > .contenu-page > aside > .auteur > .nom-auteur, .page > .contenu-page > article > .auteur > .nom-auteur {
+.contenu-page > aside > .auteur > .nom-auteur, .contenu-page > article > .auteur > .nom-auteur {
   margin-left: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,28 +203,28 @@ ________________________________________________________*/
           flex-direction: column;
 }
 
-.page > .contenu-page > aside > .auteur > .nom-auteur h4:first-child, .page > .contenu-page > article > .auteur > .nom-auteur h4:first-child {
+.contenu-page > aside > .auteur > .nom-auteur h4:first-child, .contenu-page > article > .auteur > .nom-auteur h4:first-child {
   font-weight: 700;
   font-size: 1.1rem;
   padding-bottom: .2em;
 }
 
-.page > .contenu-page > aside > .auteur > .nom-auteur h4:last-child, .page > .contenu-page > article > .auteur > .nom-auteur h4:last-child {
+.contenu-page > aside > .auteur > .nom-auteur h4:last-child, .contenu-page > article > .auteur > .nom-auteur h4:last-child {
   color: var(--gris);
   font-weight: 500;
 }
 
-.page > .contenu-page > article {
+.contenu-page > article {
   line-height: 1.6;
 }
 
-.page > .contenu-page > article h1 {
+.contenu-page > article h1 {
   font-size: 2.3rem;
   font-weight: 300;
   line-height: 1;
 }
 
-.page > .contenu-page > article h2 {
+.contenu-page > article h2 {
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--orange);
@@ -222,26 +232,26 @@ ________________________________________________________*/
   margin-bottom: 0.5rem;
 }
 
-.page > .contenu-page > article h4 {
+.contenu-page > article h4 {
   color: var(--gris-pale);
   font-weight: 500;
 }
 
-.page > .contenu-page > article > p:first-of-type {
+.contenu-page > article > p:first-of-type {
   padding: 1em;
   font-style: italic;
   text-align: center;
 }
 
-.page > .contenu-page > article figure {
+.contenu-page > article figure {
   margin: 2rem 0;
 }
 
-.page > .contenu-page > article figure img {
+.contenu-page > article figure img {
   width: 100%;
 }
 
-.page > .contenu-page > article figure figcaption {
+.contenu-page > article figure figcaption {
   font-size: .9rem;
   font-weight: 500;
 }
