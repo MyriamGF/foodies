@@ -126,6 +126,45 @@ body > .interface > .page {
 
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
+.menu-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--noir);
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.menu-mobile > .btn-hamburger {
+  position: absolute;
+  left: 20px;
+}
+
+.menu-mobile > .btn-hamburger img {
+  width: 40px;
+  -webkit-filter: blur(100);
+          filter: blur(100);
+}
+
+.menu-mobile > img {
+  width: 230px;
+}
+
+.nav-principale {
+  display: none;
+}
+
 /*////[Code SCSS du header]
 ________________________________________________________*/
 header {

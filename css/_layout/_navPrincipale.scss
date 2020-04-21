@@ -6,3 +6,32 @@
 
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
+
+.menu-mobile {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--noir);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+
+    &>.btn-hamburger {
+        position: absolute;
+        left: 20px;
+
+        & img {
+            width: 40px;
+            filter: blur(100);
+        }
+    }
+
+    &>img {
+        width: 230px;
+        // filter: brightness(0);
+    }
+}
+
+.nav-principale {
+    display: none;
+}
