@@ -43,6 +43,10 @@ ________________________________________________________*/
     height: 100vh;
     transition: width 1s, opacity .7s, left 1.1s;
     background-color: var(--blanc);
+    font-size: 1.2rem;
+    @include breakpoint-min(768){
+        font-size: 1.1rem;
+    }
 
     &>.nav-liste {
         @include flex-column;

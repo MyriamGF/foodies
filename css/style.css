@@ -183,6 +183,13 @@ ________________________________________________________*/
   -webkit-transition: width 1s, opacity .7s, left 1.1s;
   transition: width 1s, opacity .7s, left 1.1s;
   background-color: var(--blanc);
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .nav-principale {
+    font-size: 1.1rem;
+  }
 }
 
 .nav-principale > .nav-liste {
