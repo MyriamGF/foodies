@@ -10,13 +10,17 @@ ________________________________________________________*/
 .btn-hamburger {
     position: fixed;
     z-index: 1000;
-    top: 13px;
+    top: 6px;
     left: 15px;
 
     &>img {
         position: absolute;
         width: 40px;
         filter: brightness(80%);
+    }
+
+    @include breakpoint-min(1366) {
+        display: none;
     }
 }
 
@@ -29,34 +33,74 @@ ________________________________________________________*/
     padding: 20px;
     position: fixed;
     width: 100%;
-    height: 65px;
+    height: 52px;
 
     &>img {
-        // width: 230px;
-        width: 45vw;
+        min-width: 220px;
+        width: 30vw;
+    }
+
+    @include breakpoint-min(1366) {
+        display: none;
     }
 }
 
 .nav-principale {
     position: fixed;
-    padding: 6rem 1rem;
+    padding: 3.2rem 1rem;
     height: 100vh;
     transition: width 1s, opacity .7s, left 1.1s;
     background-color: var(--blanc);
     font-size: 1.2rem;
-    @include breakpoint-min(768){
+
+    @include breakpoint-min(768) {
         font-size: 1.1rem;
+    }
+
+    @include breakpoint-min(1366) {
+        width: 100%;
+        height: 52px;
+        padding: 0;
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--noir);
+        color: var(--blanc);
     }
 
     &>.nav-liste {
         @include flex-column;
 
-        & li {
-            width: 100%;
-            padding: 1.5rem 0 1.5rem 1rem;
+        @include breakpoint-min(1366) {
+            @include flex-row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
         }
 
-        li.selected {
+        &>a {
+            @include breakpoint-min(1366) {
+                height: 100%;
+                @include flex-column;
+                justify-content: center;
+                align-self: center;
+                padding: 0 2rem;
+            }
+
+            & li {
+                width: 100%;
+                padding: 1.5rem 0 1.5rem 1rem;
+
+                @include breakpoint-min(1366) {
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        &>a.selected {
             color: var(--blanc);
             background-color: var(--orange);
         }
@@ -68,6 +112,9 @@ ________________________________________________________*/
             background: var(--noir);
             width: 100%;
             opacity: 10%;
+            @include breakpoint-min(1366) {
+                display: none;
+            }
         }
 
         &>a:last-child::after {
@@ -80,12 +127,22 @@ ________________________________________________________*/
     width: 0%;
     opacity: 0%;
     left: -400px;
+
+    @include breakpoint-min(1366) {
+        width: 100%;
+        left: 0px;
+        opacity: 100%;
+    }
 }
 
 .nav-ouvert {
     opacity: 100%;
     width: 300px;
     left: 0;
+
+    @include breakpoint-min(1366) {
+        width: 100%;
+    }
 }
 
 .page-ferme {
@@ -94,4 +151,8 @@ ________________________________________________________*/
 
 .page-pousse {
     margin-left: 300px;
+
+    @include breakpoint-min(1366) {
+        margin-left: 0px;
+    }
 }

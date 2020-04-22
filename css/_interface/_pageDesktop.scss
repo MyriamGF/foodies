@@ -9,10 +9,11 @@ ________________________________________________________*/
 
 body {
     &>.interface {
-        &>.page {
-            @include breakpoint-min(1366) {
-                
-            }
+        @include breakpoint-min(1366) {
+            @include flex-column;
+
         }
+
+        // &>.page {}
     }
 }

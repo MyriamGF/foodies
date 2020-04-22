@@ -134,12 +134,24 @@ body > .interface > .page {
 ________________________________________________________*/
 /*////[Code SCSS de la structure de la page pour desktop]
 ________________________________________________________*/
+@media (min-width: 1366px) {
+  body > .interface {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
 .btn-hamburger {
   position: fixed;
   z-index: 1000;
-  top: 13px;
+  top: 6px;
   left: 15px;
 }
 
@@ -148,6 +160,12 @@ ________________________________________________________*/
   width: 40px;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
+}
+
+@media (min-width: 1366px) {
+  .btn-hamburger {
+    display: none;
+  }
 }
 
 .menu-mobile {
@@ -169,16 +187,23 @@ ________________________________________________________*/
   padding: 20px;
   position: fixed;
   width: 100%;
-  height: 65px;
+  height: 52px;
 }
 
 .menu-mobile > img {
-  width: 45vw;
+  min-width: 220px;
+  width: 30vw;
+}
+
+@media (min-width: 1366px) {
+  .menu-mobile {
+    display: none;
+  }
 }
 
 .nav-principale {
   position: fixed;
-  padding: 6rem 1rem;
+  padding: 3.2rem 1rem;
   height: 100vh;
   -webkit-transition: width 1s, opacity .7s, left 1.1s;
   transition: width 1s, opacity .7s, left 1.1s;
@@ -192,6 +217,29 @@ ________________________________________________________*/
   }
 }
 
+@media (min-width: 1366px) {
+  .nav-principale {
+    width: 100%;
+    height: 52px;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: var(--noir);
+    color: var(--blanc);
+  }
+}
+
 .nav-principale > .nav-liste {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,12 +250,59 @@ ________________________________________________________*/
           flex-direction: column;
 }
 
-.nav-principale > .nav-liste li {
+@media (min-width: 1366px) {
+  .nav-principale > .nav-liste {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .nav-principale > .nav-liste > a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 0 2rem;
+  }
+}
+
+.nav-principale > .nav-liste > a li {
   width: 100%;
   padding: 1.5rem 0 1.5rem 1rem;
 }
 
-.nav-principale > .nav-liste li.selected {
+@media (min-width: 1366px) {
+  .nav-principale > .nav-liste > a li {
+    padding: 0;
+    font-weight: 500;
+    font-size: .9rem;
+  }
+}
+
+.nav-principale > .nav-liste > a.selected {
   color: var(--blanc);
   background-color: var(--orange);
 }
@@ -221,16 +316,36 @@ ________________________________________________________*/
   opacity: 10%;
 }
 
+@media (min-width: 1366px) {
+  .nav-principale > .nav-liste > a::before, .nav-principale > .nav-liste > a:last-child::after {
+    display: none;
+  }
+}
+
 .nav-ferme {
   width: 0%;
   opacity: 0%;
   left: -400px;
 }
 
+@media (min-width: 1366px) {
+  .nav-ferme {
+    width: 100%;
+    left: 0px;
+    opacity: 100%;
+  }
+}
+
 .nav-ouvert {
   opacity: 100%;
   width: 300px;
   left: 0;
+}
+
+@media (min-width: 1366px) {
+  .nav-ouvert {
+    width: 100%;
+  }
 }
 
 .page-ferme {
@@ -241,9 +356,16 @@ ________________________________________________________*/
   margin-left: 300px;
 }
 
+@media (min-width: 1366px) {
+  .page-pousse {
+    margin-left: 0px;
+  }
+}
+
 /*////[Code SCSS du header]
 ________________________________________________________*/
 header {
+  margin-top: 52px;
   width: 100vw;
   height: 420px;
   background-image: url(../images/header/header-640.jpg);

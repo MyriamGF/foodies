@@ -37,7 +37,7 @@ $(function () {
 
         $('.btn-hamburger').on('blur', function () {
             togglePage('.page');
-            // $(this).removeAttr('style');
+            $(this).removeAttr('style');
         });
     }
 });
