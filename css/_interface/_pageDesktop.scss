@@ -11,7 +11,7 @@ body {
     &>.interface {
         &>.page {
             @include breakpoint-min(1366) {
-                background-color: red;
+                
             }
         }
     }

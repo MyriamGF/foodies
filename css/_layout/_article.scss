@@ -26,13 +26,12 @@ ________________________________________________________*/
 
         @include breakpoint-min(768) {
             width: 80%;
+            padding: 1.7rem;
         }
-
         /*[Zone verte]*/
         &>.zone-verte {
             background-color: var(--vert);
             padding: 1em;
-
             &>h4 {
                 color: var(--blanc);
                 font-size: 1.5rem;
@@ -84,16 +83,21 @@ ________________________________________________________*/
                 font-size: 2.3rem;
                 font-weight: 300;
                 line-height: 1;
+                @include breakpoint-min(768){
+                    font-size: 2.5rem;
+                }
             }
 
             h2 {
                 font-weight: 500;
                 font-size: 1.5rem;
                 color: var(--orange);
-
                 margin: {
                     top: 2rem;
                     bottom: 0.5rem;
+                }
+                @include breakpoint-min(768){
+                    font-size: 1.7rem;
                 }
             }
 
@@ -108,16 +112,24 @@ ________________________________________________________*/
                 text-align: center;
             }
 
-            & figure {
-                margin: 2rem 0;
+            &>.img-potluck {
+                @include flex-column;
+                justify-content: center;
+                align-items: center;
 
-                img {
-                    width: 100%;
-                }
+                &>figure {
+                    position: relative;
+                    margin: 2rem 0;
 
-                figcaption {
-                    font-size: .9rem;
-                    font-weight: 500;
+                    img {
+                        width: 100%;
+                        max-width: 600px;
+                    }
+
+                    figcaption {
+                        font-size: .9rem;
+                        font-weight: 500;
+                    }
                 }
             }
         }

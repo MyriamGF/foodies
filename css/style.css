@@ -128,25 +128,12 @@ body > .interface > .page {
   width: 100%;
   -webkit-transition: margin 1s;
   transition: margin 1s;
-  background-color: red;
 }
 
 /*////[Code SCSS de la structure de la page pour tablette]
 ________________________________________________________*/
-@media (min-width: 768px) {
-  body > .interface > .page {
-    background-color: white;
-  }
-}
-
 /*////[Code SCSS de la structure de la page pour desktop]
 ________________________________________________________*/
-@media (min-width: 1366px) {
-  body > .interface > .page {
-    background-color: red;
-  }
-}
-
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
 .btn-hamburger {
@@ -304,6 +291,7 @@ ________________________________________________________*/
 @media (min-width: 768px) {
   .par-dessus > .contenu-page {
     width: 80%;
+    padding: 1.7rem;
   }
 }
 
@@ -374,12 +362,24 @@ ________________________________________________________*/
   line-height: 1;
 }
 
+@media (min-width: 768px) {
+  .par-dessus > .contenu-page > article h1 {
+    font-size: 2.5rem;
+  }
+}
+
 .par-dessus > .contenu-page > article h2 {
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--orange);
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .par-dessus > .contenu-page > article h2 {
+    font-size: 1.7rem;
+  }
 }
 
 .par-dessus > .contenu-page > article h4 {
@@ -393,15 +393,33 @@ ________________________________________________________*/
   text-align: center;
 }
 
-.par-dessus > .contenu-page > article figure {
+.par-dessus > .contenu-page > article > .img-potluck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.par-dessus > .contenu-page > article > .img-potluck > figure {
+  position: relative;
   margin: 2rem 0;
 }
 
-.par-dessus > .contenu-page > article figure img {
+.par-dessus > .contenu-page > article > .img-potluck > figure img {
   width: 100%;
+  max-width: 600px;
 }
 
-.par-dessus > .contenu-page > article figure figcaption {
+.par-dessus > .contenu-page > article > .img-potluck > figure figcaption {
   font-size: .9rem;
   font-weight: 500;
 }
@@ -421,8 +439,25 @@ ________________________________________________________*/
   margin-bottom: 0.5rem;
 }
 
-.recettes img {
+.recettes .recette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recettes .recette img {
   width: 100%;
+  max-width: 550px;
 }
 
 .recettes .recette-01::after,
