@@ -16,10 +16,10 @@ header{
     background-image: url(../images/header/header-640.jpg);
     background-size: cover;
     background-position: center;
-    & > img{
+    & img{
         display: none;
         @include breakpoint-min(1366){
-            display: block;
+            display: flex;
             width: 40vw;
             margin-top: 3rem;
         }

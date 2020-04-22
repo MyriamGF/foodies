@@ -26,25 +26,40 @@ ________________________________________________________*/
 
         @include breakpoint-min(768) {
             width: 80%;
-            padding: 1.7rem;
+            padding: 1.7em;
             font-size: 1.1rem;
+        }
+
+        @include breakpoint-min(1366) {
+            padding: 2em;
+            @include flex-row;
+            flex-wrap: wrap;
         }
         /*[Zone verte]*/
         &>.zone-verte {
             background-color: var(--vert);
             padding: 1em;
+            @include breakpoint-min(1366) {
+                width: 100%;
+                flex-basis: 100%;
+            }
             &>h4 {
                 color: var(--blanc);
                 font-size: 1.5rem;
                 font-weight: 500;
             }
+            
         }
 
         /*[Aside]*/
         &>aside {
             padding: 1.2em;
             @include breakpoint-min(768) {
-                padding: 2.3rem 0 0 0;
+                padding: 2.3em 0 0 0;
+            }
+            @include breakpoint-min(1366) {
+                padding: 3em 3em 0 0;
+                width: 30%;
             }
 
             /*[Section de l'auteur]*/
@@ -83,6 +98,9 @@ ________________________________________________________*/
         &>article {
             @extend aside;
             line-height: 1.6;
+            @include breakpoint-min(1366) {
+                width: 70%;
+            }
 
             h1 {
                 font-size: 2.3rem;

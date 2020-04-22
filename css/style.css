@@ -190,9 +190,9 @@ ________________________________________________________*/
   height: 52px;
 }
 
-.menu-mobile > img {
+.menu-mobile img {
   min-width: 220px;
-  width: 30vw;
+  width: 22vw;
 }
 
 @media (min-width: 1366px) {
@@ -384,13 +384,15 @@ header {
   background-position: center;
 }
 
-header > img {
+header img {
   display: none;
 }
 
 @media (min-width: 1366px) {
-  header > img {
-    display: block;
+  header img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 40vw;
     margin-top: 3rem;
   }
@@ -453,14 +455,37 @@ ________________________________________________________*/
 @media (min-width: 768px) {
   .par-dessus > .contenu-page {
     width: 80%;
-    padding: 1.7rem;
+    padding: 1.7em;
     font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page {
+    padding: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 .par-dessus > .contenu-page > .zone-verte {
   background-color: var(--vert);
   padding: 1em;
+}
+
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page > .zone-verte {
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .par-dessus > .contenu-page > .zone-verte > h4 {
@@ -476,7 +501,14 @@ ________________________________________________________*/
 
 @media (min-width: 768px) {
   .par-dessus > .contenu-page > aside, .par-dessus > .contenu-page > article {
-    padding: 2.3rem 0 0 0;
+    padding: 2.3em 0 0 0;
+  }
+}
+
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page > aside, .par-dessus > .contenu-page > article {
+    padding: 3em 3em 0 0;
+    width: 30%;
   }
 }
 
@@ -524,6 +556,12 @@ ________________________________________________________*/
 
 .par-dessus > .contenu-page > article {
   line-height: 1.6;
+}
+
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page > article {
+    width: 70%;
+  }
 }
 
 .par-dessus > .contenu-page > article h1 {
@@ -600,6 +638,12 @@ ________________________________________________________*/
   font-size: .95rem;
   width: 100%;
   /*[Barres grises entre recettes]*/
+}
+
+@media (min-width: 1366px) {
+  .recettes {
+    margin-top: 6rem;
+  }
 }
 
 .recettes .recette {
@@ -730,6 +774,12 @@ ________________________________________________________*/
   display: none;
 }
 
+@media (min-width: 1366px) {
+  .pubs-desktop {
+    display: block;
+  }
+}
+
 /*[Pubs pour mobile]*/
 .pubs {
   background-color: var(--gris);
@@ -745,8 +795,20 @@ ________________________________________________________*/
   margin: 3rem;
 }
 
+@media (min-width: 1366px) {
+  .pub-mobile-1 {
+    display: none;
+  }
+}
+
 .pub-mobile-2 {
   padding: 5rem 0;
+}
+
+@media (min-width: 1366px) {
+  .pub-mobile-2 {
+    display: none;
+  }
 }
 
 /*////[Code SCSS du footer]

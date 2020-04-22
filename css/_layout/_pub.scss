@@ -10,6 +10,9 @@ ________________________________________________________*/
 /*[Pubs pour desktop]*/
 .pubs-desktop {
     display: none;
+    @include breakpoint-min(1366){
+        display: block;
+    }
 }
 
 /*[Pubs pour mobile]*/
@@ -25,8 +28,14 @@ ________________________________________________________*/
 .pub-mobile-1 {
     padding: 9rem 0;
     margin: 3rem;
+    @include breakpoint-min(1366){
+        display: none;
+    }
 }
 
 .pub-mobile-2 {
     padding: 5rem 0;
+    @include breakpoint-min(1366){
+        display: none;
+    }
 }

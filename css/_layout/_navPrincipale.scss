@@ -35,9 +35,9 @@ ________________________________________________________*/
     width: 100%;
     height: 52px;
 
-    &>img {
+    & img {
         min-width: 220px;
-        width: 30vw;
+        width: 22vw;
     }
 
     @include breakpoint-min(1366) {
