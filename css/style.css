@@ -138,8 +138,8 @@ ________________________________________________________*/
 .btn-hamburger > img {
   position: absolute;
   width: 40px;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
 .menu-mobile {
@@ -160,18 +160,20 @@ ________________________________________________________*/
   padding: 20px;
   position: fixed;
   width: 100%;
+  height: 65px;
 }
 
 .menu-mobile > img {
-  width: 230px;
+  width: 45vw;
 }
 
 .nav-principale {
   position: fixed;
+  padding: 6rem 1rem;
   z-index: 999;
   height: 100vh;
-  -webkit-transition: width 1s, opacity 1s;
-  transition: width 1s, opacity 1s;
+  -webkit-transition: width 1s, opacity .7s, left 1.1s;
+  transition: width 1s, opacity .7s, left 1.1s;
   background-color: var(--blanc);
 }
 
@@ -185,14 +187,35 @@ ________________________________________________________*/
           flex-direction: column;
 }
 
+.nav-principale > .nav-liste li {
+  width: 100%;
+  padding: 1.5rem 0 1.5rem 1rem;
+}
+
+.nav-principale > .nav-liste li.selected {
+  color: var(--blanc);
+  background-color: var(--orange);
+}
+
+.nav-principale > .nav-liste > a::before, .nav-principale > .nav-liste > a:last-child::after {
+  content: " ";
+  display: block;
+  height: 1px;
+  background: var(--noir);
+  width: 100%;
+  opacity: 10%;
+}
+
 .nav-ferme {
-  width: 0;
-  opacity: 0;
+  width: 0%;
+  opacity: 0%;
+  left: -400px;
 }
 
 .nav-ouvert {
-  opacity: 100;
+  opacity: 100%;
   width: 300px;
+  left: 0;
 }
 
 .page-ferme {
