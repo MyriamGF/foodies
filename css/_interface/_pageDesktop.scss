@@ -1,0 +1,18 @@
+//----------------------------------------------------//
+//                                                    //
+//                // PAGE DESKTOP //                  //
+//                _pageDesktop.scss                   //
+//----------------------------------------------------//
+
+/*////[Code SCSS de la structure de la page pour desktop]
+________________________________________________________*/
+
+body {
+    &>.interface {
+        &>.page {
+            @include breakpoint-min(1366) {
+                background-color: red;
+            }
+        }
+    }
+}

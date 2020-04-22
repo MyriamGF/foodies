@@ -1,8 +1,11 @@
 //----------------------------------------------------//
 //                                                    //
-//               // GRILLE MOBILE //                  //
-//               _grilleMobile.scss                   //
+//                // PAGE MOBILE //                   //
+//                _pageMobile.scss                    //
 //----------------------------------------------------//
+
+/*////[Code SCSS de la structure de la page pour mobile]
+________________________________________________________*/
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -16,6 +19,7 @@ body {
         &>.page {
             width: 100%;
             transition: margin 1s;
+            background-color: red; // *****************EFFACER***********************
         }
     }
 }

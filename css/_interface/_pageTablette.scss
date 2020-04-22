@@ -1,0 +1,18 @@
+//----------------------------------------------------//
+//                                                    //
+//                // PAGE TABLETTE //                 //
+//                _pageTablette.scss                  //
+//----------------------------------------------------//
+
+/*////[Code SCSS de la structure de la page pour tablette]
+________________________________________________________*/
+
+body {
+    &>.interface {
+        &>.page {
+            @include breakpoint-min(768) {
+                background-color: white;
+            }
+        }
+    }
+}
