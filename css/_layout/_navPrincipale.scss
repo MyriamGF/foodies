@@ -66,6 +66,7 @@ ________________________________________________________*/
         align-items: center;
         background-color: var(--noir);
         color: var(--blanc);
+        z-index: 1000;
     }
 
     &>.nav-liste {

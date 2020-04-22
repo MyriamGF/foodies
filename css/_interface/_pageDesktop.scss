@@ -11,9 +11,6 @@ body {
     &>.interface {
         @include breakpoint-min(1366) {
             @include flex-column;
-
         }
-
-        // &>.page {}
     }
 }

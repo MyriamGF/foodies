@@ -237,6 +237,7 @@ ________________________________________________________*/
             align-items: center;
     background-color: var(--noir);
     color: var(--blanc);
+    z-index: 1000;
   }
 }
 
@@ -365,9 +366,19 @@ ________________________________________________________*/
 /*////[Code SCSS du header]
 ________________________________________________________*/
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 52px;
   width: 100vw;
-  height: 420px;
+  height: 45vh;
   background-image: url(../images/header/header-640.jpg);
   background-size: cover;
   background-position: center;
@@ -377,15 +388,25 @@ header > img {
   display: none;
 }
 
+@media (min-width: 1366px) {
+  header > img {
+    display: block;
+    width: 40vw;
+    margin-top: 3rem;
+  }
+}
+
 @media (min-width: 768px) {
   header {
     background-image: url(../images/header/header-960.jpg);
+    height: 80vh;
   }
 }
 
 @media (min-width: 1366px) {
   header {
     background-image: url(../images/header/header-1800.jpg);
+    height: 90vh;
   }
 }
 
@@ -408,7 +429,7 @@ ________________________________________________________*/
 @media (min-width: 768px) {
   .par-dessus {
     position: absolute;
-    top: 300px;
+    top: 515px;
   }
 }
 

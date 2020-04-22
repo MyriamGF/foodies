@@ -8,20 +8,29 @@
 ________________________________________________________*/
 
 header{
+    @include flex-column;
+    align-items: center;
     margin-top: 52px;
     width: 100vw;
-    height: 420px;
+    height: 45vh;
     background-image: url(../images/header/header-640.jpg);
     background-size: cover;
     background-position: center;
     & > img{
         display: none;
+        @include breakpoint-min(1366){
+            display: block;
+            width: 40vw;
+            margin-top: 3rem;
+        }
     }
     @include breakpoint-min(768){
         background-image: url(../images/header/header-960.jpg);
+        height: 80vh;
     }
 
     @include breakpoint-min(1366){
         background-image: url(../images/header/header-1800.jpg);
+        height: 90vh;
     }
 }
