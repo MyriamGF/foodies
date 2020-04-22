@@ -122,10 +122,26 @@ body > .interface {
 
 body > .interface > .page {
   width: 100%;
+  -webkit-transition: margin 1s;
+  transition: margin 1s;
 }
 
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
+.btn-hamburger {
+  position: fixed;
+  z-index: 1000;
+  top: 13px;
+  left: 15px;
+}
+
+.btn-hamburger > img {
+  position: absolute;
+  width: 40px;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
 .menu-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,23 +162,45 @@ ________________________________________________________*/
   width: 100%;
 }
 
-.menu-mobile > .btn-hamburger {
-  position: absolute;
-  left: 20px;
-}
-
-.menu-mobile > .btn-hamburger img {
-  width: 40px;
-  -webkit-filter: blur(100);
-          filter: blur(100);
-}
-
 .menu-mobile > img {
   width: 230px;
 }
 
 .nav-principale {
-  display: none;
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+  -webkit-transition: width 1s, opacity 1s;
+  transition: width 1s, opacity 1s;
+  background-color: var(--blanc);
+}
+
+.nav-principale > .nav-liste {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav-ferme {
+  width: 0;
+  opacity: 0;
+}
+
+.nav-ouvert {
+  opacity: 100;
+  width: 300px;
+}
+
+.page-ferme {
+  margin-left: 0px;
+}
+
+.page-pousse {
+  margin-left: 300px;
 }
 
 /*////[Code SCSS du header]

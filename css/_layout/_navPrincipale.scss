@@ -7,6 +7,19 @@
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
 
+.btn-hamburger {
+    position: fixed;
+    z-index: 1000;
+    top: 13px;
+    left: 15px;
+
+    &>img {
+        position: absolute;
+        width: 40px;
+        filter: brightness(50%);
+    }
+}
+
 .menu-mobile {
     @include flex-column;
     justify-content: center;
@@ -16,22 +29,37 @@ ________________________________________________________*/
     position: fixed;
     width: 100%;
 
-    &>.btn-hamburger {
-        position: absolute;
-        left: 20px;
-
-        & img {
-            width: 40px;
-            filter: blur(100);
-        }
-    }
-
     &>img {
         width: 230px;
-        // filter: brightness(0);
     }
 }
 
 .nav-principale {
-    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    transition: width 1s, opacity 1s;
+    background-color: var(--blanc);
+
+    &>.nav-liste {
+        @include flex-column;
+    }
+}
+
+.nav-ferme {
+    width: 0;
+    opacity: 0;
+}
+
+.nav-ouvert {
+    opacity: 100;
+    width: 300px;
+}
+
+.page-ferme{
+    margin-left: 0px;
+}
+
+.page-pousse{
+    margin-left: 300px;   
 }
