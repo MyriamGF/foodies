@@ -239,13 +239,25 @@ ________________________________________________________*/
 header {
   width: 100vw;
   height: 420px;
-  background-image: url(../images/header/header-960.jpg);
+  background-image: url(../images/header/header-640.jpg);
   background-size: cover;
   background-position: center;
 }
 
 header > img {
   display: none;
+}
+
+@media (min-width: 768px) {
+  header {
+    background-image: url(../images/header/header-960.jpg);
+  }
+}
+
+@media (min-width: 1366px) {
+  header {
+    background-image: url(../images/header/header-1800.jpg);
+  }
 }
 
 /*////[Code SCSS de l'article]
@@ -311,6 +323,12 @@ ________________________________________________________*/
   /*[Section de l'auteur]*/
 }
 
+@media (min-width: 768px) {
+  .par-dessus > .contenu-page > aside, .par-dessus > .contenu-page > article {
+    padding: 2.3rem 0 0 0;
+  }
+}
+
 .par-dessus > .contenu-page > aside > .auteur, .par-dessus > .contenu-page > article > .auteur {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,6 +346,7 @@ ________________________________________________________*/
 
 .par-dessus > .contenu-page > aside > .auteur > .profil-auteur > img, .par-dessus > .contenu-page > article > .auteur > .profil-auteur > img {
   width: 10vw;
+  max-width: 80px;
 }
 
 .par-dessus > .contenu-page > aside > .auteur > .nom-auteur, .par-dessus > .contenu-page > article > .auteur > .nom-auteur {
@@ -429,14 +448,7 @@ ________________________________________________________*/
 .recettes {
   font-size: .95rem;
   width: 100%;
-}
-
-.recettes h3 {
-  font-weight: 500;
-  color: var(--gris);
-  font-size: 1.3rem;
-  margin-top: 1.2rem;
-  margin-bottom: 0.5rem;
+  /*[Barres grises entre recettes]*/
 }
 
 .recettes .recette {
@@ -455,23 +467,36 @@ ________________________________________________________*/
           align-items: center;
 }
 
+@media (min-width: 768px) {
+  .recettes .recette {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+}
+
 .recettes .recette img {
   width: 100%;
   max-width: 550px;
 }
 
-.recettes .recette-01::after,
-.recettes .recette-02::after {
-  content: " ";
-  display: block;
-  height: 2px;
-  background: var(--noir);
-  width: 100%;
-  margin: 3rem 0;
-  opacity: 10%;
+@media (min-width: 768px) {
+  .recettes .recette img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
-.recettes .info-recette {
+.recettes .recette > .info-recette {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,7 +506,32 @@ ________________________________________________________*/
           flex-direction: column;
 }
 
-.recettes .info-recette .bouton {
+@media (min-width: 768px) {
+  .recettes .recette > .info-recette {
+    margin-left: 2rem;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+
+.recettes .recette > .info-recette h3 {
+  font-weight: 500;
+  color: var(--gris);
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .recettes .recette > .info-recette h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+}
+
+.recettes .recette > .info-recette .bouton {
   margin-top: 2rem;
   margin-bottom: .2rem;
   font-weight: 500;
@@ -496,6 +546,30 @@ ________________________________________________________*/
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (min-width: 768px) {
+  .recettes .recette > .info-recette .bouton {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.recettes .barre-grise {
+  display: block;
+  height: 2px;
+  background: var(--noir);
+  width: 100%;
+  margin: 3rem 0;
+  opacity: 10%;
+}
+
+@media (min-width: 768px) {
+  .recettes .barre-grise {
+    margin: 3.5rem 0;
+  }
 }
 
 /*////[Code SCSS des publicités]

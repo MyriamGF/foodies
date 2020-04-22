@@ -10,10 +10,17 @@ ________________________________________________________*/
 header{
     width: 100vw;
     height: 420px;
-    background-image: url(../images/header/header-960.jpg);
+    background-image: url(../images/header/header-640.jpg);
     background-size: cover;
     background-position: center;
     & > img{
         display: none;
+    }
+    @include breakpoint-min(768){
+        background-image: url(../images/header/header-960.jpg);
+    }
+
+    @include breakpoint-min(1366){
+        background-image: url(../images/header/header-1800.jpg);
     }
 }
