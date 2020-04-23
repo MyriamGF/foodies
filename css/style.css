@@ -89,7 +89,7 @@ ________________________________________________________*/
   --noir: hsl(0, 0%, 0%);
   /*[Orangés]*/
   --orange: hsl(12, 100%, 64%);
-  --orange-pale: hsl(22, 79%, 82%);
+  --orange-pale: hsl(22, 78%, 82%);
   /*[Gris]*/
   --gris: hsl(0, 0%, 24%);
   --gris-pale: hsl(0, 0%, 60%);
@@ -274,6 +274,7 @@ ________________________________________________________*/
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /*[Effet de hover sur onglets menu]*/
   /*[Lignes grises entre onglets nav]*/
 }
 
@@ -313,6 +314,8 @@ ________________________________________________________*/
     -ms-flex-item-align: center;
         align-self: center;
     padding: 0 2rem;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
   }
 }
 
@@ -326,6 +329,15 @@ ________________________________________________________*/
     padding: 0;
     font-weight: 500;
     font-size: .9rem;
+  }
+}
+
+@media (min-width: 1366px) {
+  .nav-principale > .nav-liste > a:hover {
+    background-color: var(--gris-fonce);
+  }
+  .nav-principale > .nav-liste > a:active {
+    background-color: var(--orange);
   }
 }
 
@@ -832,6 +844,7 @@ ________________________________________________________*/
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /*[Effet de hover sur boutons]*/
 }
 
 @media (min-width: 768px) {
@@ -874,6 +887,8 @@ ________________________________________________________*/
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
 }
 
 @media (min-width: 768px) {
@@ -882,6 +897,15 @@ ________________________________________________________*/
         align-self: flex-start;
     width: 100%;
     max-width: 300px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .recettes .recette > .info-recette .bouton:hover {
+    background-color: var(--vert-fonce);
+  }
+  .recettes .recette > .info-recette .bouton:active {
+    background-color: var(--gris);
   }
 }
 

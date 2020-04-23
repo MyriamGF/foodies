@@ -31,12 +31,14 @@ ________________________________________________________*/
     z-index: 1000;
     top: 6px;
     left: 15px;
+
     &>i {
         font-size: 2.5rem;
         color: var(--blanc);
         filter: brightness(90%);
         position: absolute;
     }
+
     @include breakpoint-min(1366) {
         display: none;
     }
@@ -107,6 +109,7 @@ ________________________________________________________*/
                 justify-content: center;
                 align-self: center;
                 padding: 0 2rem;
+                transition: background-color .3s;
             }
 
             & li {
@@ -118,6 +121,17 @@ ________________________________________________________*/
                     font-weight: 500;
                     font-size: .9rem;
                 }
+            }
+        }
+
+        /*[Effet de hover sur onglets menu]*/
+        @include breakpoint-min(1366) {
+            &>a:hover {
+                background-color: var(--gris-fonce);
+            }
+
+            &>a:active {
+                background-color: var(--orange);
             }
         }
 

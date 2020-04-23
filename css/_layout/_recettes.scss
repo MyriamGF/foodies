@@ -83,11 +83,23 @@ ________________________________________________________*/
                 cursor: pointer;
                 border-radius: 10px;
                 align-self: center;
+                transition: background-color .3s;
 
                 @include breakpoint-min(768) {
                     align-self: flex-start;
                     width: 100%;
                     max-width: 300px;
+                }
+            }
+
+            /*[Effet de hover sur boutons]*/
+            @include breakpoint-min(1366) {
+                .bouton:hover {
+                    background-color: var(--vert-fonce);
+                }
+
+                .bouton:active {
+                    background-color: var(--gris);
                 }
             }
         }
@@ -103,6 +115,7 @@ ________________________________________________________*/
         width: 100%;
         margin: 4rem 0;
         opacity: 10%;
+
         @include breakpoint-min(768) {
             width: 100%;
             flex-basis: 100%;
