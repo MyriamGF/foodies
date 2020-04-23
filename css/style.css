@@ -169,6 +169,28 @@ ________________________________________________________*/
   }
 }
 
+/*[Icône hamburger menu de Font-Awesome]*/
+.btn-hamburger {
+  position: fixed;
+  z-index: 1000;
+  top: 6px;
+  left: 15px;
+}
+
+.btn-hamburger > i {
+  font-size: 2.5rem;
+  color: var(--blanc);
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  position: absolute;
+}
+
+@media (min-width: 1366px) {
+  .btn-hamburger {
+    display: none;
+  }
+}
+
 /*[Menu-mobile (logo et icône)]*/
 .menu-mobile {
   z-index: 999;

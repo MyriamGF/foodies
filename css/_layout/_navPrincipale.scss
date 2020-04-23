@@ -25,6 +25,23 @@ ________________________________________________________*/
     }
 }
 
+/*[Icône hamburger menu de Font-Awesome]*/
+.btn-hamburger {
+    position: fixed;
+    z-index: 1000;
+    top: 6px;
+    left: 15px;
+    &>i {
+        font-size: 2.5rem;
+        color: var(--blanc);
+        filter: brightness(90%);
+        position: absolute;
+    }
+    @include breakpoint-min(1366) {
+        display: none;
+    }
+}
+
 /*[Menu-mobile (logo et icône)]*/
 .menu-mobile {
     z-index: 999;
