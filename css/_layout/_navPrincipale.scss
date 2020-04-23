@@ -113,6 +113,7 @@ ________________________________________________________*/
             background: var(--noir);
             width: 100%;
             opacity: 10%;
+
             @include breakpoint-min(1366) {
                 display: none;
             }
@@ -121,6 +122,18 @@ ________________________________________________________*/
         &>a:last-child::after {
             @extend a::before;
         }
+    }
+}
+
+.nav-principale::after{
+    @include breakpoint-min(1366) {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 52px;
+        height: 3px;
+        width: 100%;
+        background: var(--noir);
     }
 }
 
