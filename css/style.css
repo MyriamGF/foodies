@@ -148,6 +148,7 @@ ________________________________________________________*/
 
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
+/*[Icône hamburger menu]*/
 .btn-hamburger {
   position: fixed;
   z-index: 1000;
@@ -168,6 +169,7 @@ ________________________________________________________*/
   }
 }
 
+/*[Menu-mobile (logo et icône)]*/
 .menu-mobile {
   z-index: 999;
   display: -webkit-box;
@@ -201,6 +203,7 @@ ________________________________________________________*/
   }
 }
 
+/*[Navigation principale]*/
 .nav-principale {
   position: fixed;
   padding: 3.2rem 1rem;
@@ -249,6 +252,7 @@ ________________________________________________________*/
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /*[Lignes grises entre onglets nav]*/
 }
 
 @media (min-width: 1366px) {
@@ -323,6 +327,7 @@ ________________________________________________________*/
   }
 }
 
+/*[Ligne noire après navigation desktop]*/
 @media (min-width: 1366px) {
   .nav-principale::after {
     content: " ";
@@ -335,6 +340,7 @@ ________________________________________________________*/
   }
 }
 
+/*[État de la nav-mobile quand fermée]*/
 .nav-ferme {
   width: 0%;
   opacity: 0%;
@@ -349,6 +355,7 @@ ________________________________________________________*/
   }
 }
 
+/*[État de la nav-mobile quand ouverte]*/
 .nav-ouvert {
   opacity: 100%;
   width: 300px;
@@ -361,10 +368,12 @@ ________________________________________________________*/
   }
 }
 
+/*[État initial de la page]*/
 .page-ferme {
   margin-left: 0px;
 }
 
+/*[État de la page quand poussée par nav-mobile]*/
 .page-pousse {
   margin-left: 300px;
 }
@@ -394,20 +403,7 @@ header {
   background-image: url(../images/header/header-640.jpg);
   background-size: cover;
   background-position: center;
-}
-
-header img {
-  display: none;
-}
-
-@media (min-width: 1366px) {
-  header img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 40vw;
-    margin-top: 3rem;
-  }
+  /*[Logo desktop]*/
 }
 
 @media (min-width: 768px) {
@@ -421,6 +417,20 @@ header img {
   header {
     background-image: url(../images/header/header-1800.jpg);
     height: 90vh;
+  }
+}
+
+header img {
+  display: none;
+}
+
+@media (min-width: 1366px) {
+  header img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40vw;
+    margin-top: 3rem;
   }
 }
 
@@ -527,7 +537,7 @@ ________________________________________________________*/
 @media (min-width: 1366px) {
   .par-dessus > .contenu-page > aside, .par-dessus > .contenu-page > article {
     padding: 3em 3em 0 0;
-    width: 30%;
+    width: 25%;
   }
 }
 
@@ -642,6 +652,12 @@ ________________________________________________________*/
   }
 }
 
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page > article h1 {
+    font-size: 3.2rem;
+  }
+}
+
 .par-dessus > .contenu-page > article h2 {
   font-weight: 500;
   font-size: 1.5rem;
@@ -656,15 +672,34 @@ ________________________________________________________*/
   }
 }
 
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page > article h2 {
+    font-size: 1.9rem;
+  }
+}
+
 .par-dessus > .contenu-page > article h4 {
   color: var(--gris-pale);
   font-weight: 500;
+}
+
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page > article h4 {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
 }
 
 .par-dessus > .contenu-page > article > p:first-of-type {
   padding: 1em;
   font-style: italic;
   text-align: center;
+}
+
+@media (min-width: 1366px) {
+  .par-dessus > .contenu-page > article > p:first-of-type {
+    padding: 4.3em 4em 2em 4em;
+  }
 }
 
 .par-dessus > .contenu-page > article > .img-potluck {
@@ -703,6 +738,7 @@ ________________________________________________________*/
 .recettes {
   font-size: .95rem;
   width: 100%;
+  /*[Style pour chaque recette]*/
   /*[Barres grises entre recettes]*/
 }
 
@@ -726,6 +762,8 @@ ________________________________________________________*/
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*[Image de la recette]*/
+  /*[Infos de la recette (texte et bouton)]*/
 }
 
 @media (min-width: 768px) {
@@ -754,6 +792,12 @@ ________________________________________________________*/
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+}
+
+@media (min-width: 1366px) {
+  .recettes .recette img {
+    max-width: 400px;
   }
 }
 
@@ -835,6 +879,35 @@ ________________________________________________________*/
 
 /*////[Code SCSS des publicités]
 ________________________________________________________*/
+/*[Mise en forme des publicités]*/
+.pubs {
+  background-color: var(--gris);
+  color: var(--gris-pale);
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 5rem 0;
+}
+
+@media (min-width: 1366px) {
+  .pubs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 520px;
+  }
+}
+
 /*[Pubs pour desktop]*/
 .pubs-desktop {
   display: none;
@@ -847,15 +920,6 @@ ________________________________________________________*/
 }
 
 /*[Pubs pour mobile]*/
-.pubs {
-  background-color: var(--gris);
-  color: var(--gris-pale);
-  font-weight: 500;
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 5rem 0;
-}
-
 .pub-mobile-1 {
   padding: 9rem 0;
   margin: 3rem;

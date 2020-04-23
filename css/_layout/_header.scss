@@ -7,7 +7,7 @@
 /*////[Code SCSS du header]
 ________________________________________________________*/
 
-header{
+header {
     @include flex-column;
     align-items: center;
     margin-top: 52px;
@@ -16,21 +16,25 @@ header{
     background-image: url(../images/header/header-640.jpg);
     background-size: cover;
     background-position: center;
-    & img{
-        display: none;
-        @include breakpoint-min(1366){
-            display: flex;
-            width: 40vw;
-            margin-top: 3rem;
-        }
-    }
-    @include breakpoint-min(768){
+
+    @include breakpoint-min(768) {
         background-image: url(../images/header/header-960.jpg);
         height: 80vh;
     }
 
-    @include breakpoint-min(1366){
+    @include breakpoint-min(1366) {
         background-image: url(../images/header/header-1800.jpg);
         height: 90vh;
+    }
+
+    /*[Logo desktop]*/
+    & img {
+        display: none;
+
+        @include breakpoint-min(1366) {
+            display: flex;
+            width: 40vw;
+            margin-top: 3rem;
+        }
     }
 }

@@ -10,10 +10,12 @@ ________________________________________________________*/
 .recettes {
     font-size: .95rem;
     width: 100%;
-    @include breakpoint-min(1366){
+
+    @include breakpoint-min(1366) {
         margin-top: 6rem;
     }
 
+    /*[Style pour chaque recette]*/
     .recette {
         @include flex-column;
         justify-content: center;
@@ -25,6 +27,7 @@ ________________________________________________________*/
             margin-bottom: 3rem;
         }
 
+        /*[Image de la recette]*/
         & img {
             width: 100%;
             max-width: 550px;
@@ -32,8 +35,13 @@ ________________________________________________________*/
             @include breakpoint-min(768) {
                 flex: 1;
             }
+
+            @include breakpoint-min(1366) {
+                max-width: 400px;
+            }
         }
 
+        /*[Infos de la recette (texte et bouton)]*/
         &>.info-recette {
             @include flex-column;
 
@@ -105,6 +113,7 @@ ________________________________________________________*/
         width: 100%;
         margin: 3rem 0;
         opacity: 10%;
+
         @include breakpoint-min(768) {
             margin: 3.5rem 0;
         }

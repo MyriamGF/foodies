@@ -7,15 +7,7 @@
 /*////[Code SCSS des publicités]
 ________________________________________________________*/
 
-/*[Pubs pour desktop]*/
-.pubs-desktop {
-    display: none;
-    @include breakpoint-min(1366){
-        display: block;
-    }
-}
-
-/*[Pubs pour mobile]*/
+/*[Mise en forme des publicités]*/
 .pubs {
     background-color: var(--gris);
     color: var(--gris-pale);
@@ -23,19 +15,38 @@ ________________________________________________________*/
     text-align: center;
     font-size: 1.2rem;
     margin: 5rem 0;
+
+    @include breakpoint-min(1366) {
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        height: 520px;
+    }
 }
 
+/*[Pubs pour desktop]*/
+.pubs-desktop {
+    display: none;
+
+    @include breakpoint-min(1366) {
+        display: block;
+    }
+}
+
+/*[Pubs pour mobile]*/
 .pub-mobile-1 {
     padding: 9rem 0;
     margin: 3rem;
-    @include breakpoint-min(1366){
+
+    @include breakpoint-min(1366) {
         display: none;
     }
 }
 
 .pub-mobile-2 {
     padding: 5rem 0;
-    @include breakpoint-min(1366){
+
+    @include breakpoint-min(1366) {
         display: none;
     }
 }

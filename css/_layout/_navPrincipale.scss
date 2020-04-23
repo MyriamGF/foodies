@@ -7,6 +7,7 @@
 /*////[Code SCSS de la navigation mobile et desktop]
 ________________________________________________________*/
 
+/*[Icône hamburger menu]*/
 .btn-hamburger {
     position: fixed;
     z-index: 1000;
@@ -24,6 +25,7 @@ ________________________________________________________*/
     }
 }
 
+/*[Menu-mobile (logo et icône)]*/
 .menu-mobile {
     z-index: 999;
     @include flex-column;
@@ -45,6 +47,7 @@ ________________________________________________________*/
     }
 }
 
+/*[Navigation principale]*/
 .nav-principale {
     position: fixed;
     padding: 3.2rem 1rem;
@@ -106,6 +109,7 @@ ________________________________________________________*/
             background-color: var(--orange);
         }
 
+        /*[Lignes grises entre onglets nav]*/
         &>a::before {
             content: " ";
             display: block;
@@ -125,7 +129,8 @@ ________________________________________________________*/
     }
 }
 
-.nav-principale::after{
+/*[Ligne noire après navigation desktop]*/
+.nav-principale::after {
     @include breakpoint-min(1366) {
         content: " ";
         display: block;
@@ -137,6 +142,7 @@ ________________________________________________________*/
     }
 }
 
+/*[État de la nav-mobile quand fermée]*/
 .nav-ferme {
     width: 0%;
     opacity: 0%;
@@ -149,6 +155,7 @@ ________________________________________________________*/
     }
 }
 
+/*[État de la nav-mobile quand ouverte]*/
 .nav-ouvert {
     opacity: 100%;
     width: 300px;
@@ -159,10 +166,12 @@ ________________________________________________________*/
     }
 }
 
+/*[État initial de la page]*/
 .page-ferme {
     margin-left: 0px;
 }
 
+/*[État de la page quand poussée par nav-mobile]*/
 .page-pousse {
     margin-left: 300px;
 

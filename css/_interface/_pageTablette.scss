@@ -10,9 +10,7 @@ ________________________________________________________*/
 body {
     &>.interface {
         &>.page {
-            @include breakpoint-min(768) {
-                
-            }
+            @include breakpoint-min(768) {}
         }
     }
 }

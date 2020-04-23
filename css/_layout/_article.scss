@@ -68,7 +68,7 @@ ________________________________________________________*/
 
             @include breakpoint-min(1366) {
                 padding: 3em 3em 0 0;
-                width: 30%;
+                width: 25%;
             }
 
             /*[Section de l'auteur]*/
@@ -147,6 +147,11 @@ ________________________________________________________*/
                 @include breakpoint-min(768) {
                     font-size: 2.5rem;
                 }
+
+                @include breakpoint-min(1366) {
+                    font-size: 3.2rem;
+
+                }
             }
 
             h2 {
@@ -162,17 +167,30 @@ ________________________________________________________*/
                 @include breakpoint-min(768) {
                     font-size: 1.7rem;
                 }
+
+                @include breakpoint-min(1366) {
+                    font-size: 1.9rem;
+                }
             }
 
             h4 {
                 color: var(--gris-pale);
                 font-weight: 500;
+
+                @include breakpoint-min(1366) {
+                    margin-top: 0.5rem;
+                    font-size: 1.3rem;
+                }
             }
 
             &>p:first-of-type {
                 padding: 1em;
                 font-style: italic;
                 text-align: center;
+
+                @include breakpoint-min(1366) {
+                    padding: 4.3em 4em 2em 4em;
+                }
             }
 
             &>.img-potluck {
