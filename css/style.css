@@ -778,7 +778,8 @@ ________________________________________________________*/
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 3rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -862,18 +863,23 @@ ________________________________________________________*/
   }
 }
 
-.recettes .barre-grise {
+.recettes .recette-01::after,
+.recettes .recette-02::after {
+  content: " ";
   display: block;
   height: 2px;
   background: var(--noir);
   width: 100%;
-  margin: 3rem 0;
+  margin: 4rem 0;
   opacity: 10%;
 }
 
 @media (min-width: 768px) {
-  .recettes .barre-grise {
-    margin: 3.5rem 0;
+  .recettes .recette-01::after,
+  .recettes .recette-02::after {
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 

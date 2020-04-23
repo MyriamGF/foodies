@@ -24,7 +24,7 @@ ________________________________________________________*/
         @include breakpoint-min(768) {
             @include flex-row;
             align-items: flex-start;
-            margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
 
         /*[Image de la recette]*/
@@ -94,28 +94,18 @@ ________________________________________________________*/
     }
 
     /*[Barres grises entre recettes]*/
-
-    // .recette-01::after,
-    // .recette-02::after {
-    //     content: " ";
-    //     display: block;
-    //     height: 2px;
-    //     background: var(--noir);
-    //     width: 100%;
-    //     margin: 3rem 0;
-    //     opacity: 10%;
-    // }
-
-    .barre-grise {
+    .recette-01::after,
+    .recette-02::after {
+        content: " ";
         display: block;
         height: 2px;
         background: var(--noir);
         width: 100%;
-        margin: 3rem 0;
+        margin: 4rem 0;
         opacity: 10%;
-
         @include breakpoint-min(768) {
-            margin: 3.5rem 0;
+            width: 100%;
+            flex-basis: 100%;
         }
     }
 }
