@@ -72,12 +72,11 @@ ________________________________________________________*/
                     top: 2rem;
                     bottom: .2rem;
                 }
-
                 font-weight: 500;
                 color: var(--blanc);
                 background-color: var(--vert);
                 border: none;
-                padding: .6rem 1.5rem;
+                padding: .7rem 4rem;
                 text-align: center;
                 display: inline-block;
                 cursor: pointer;
@@ -86,6 +85,7 @@ ________________________________________________________*/
                 transition: background-color .3s;
 
                 @include breakpoint-min(768) {
+                    padding: .6rem 1.5rem;
                     align-self: flex-start;
                     width: 100%;
                     max-width: 300px;

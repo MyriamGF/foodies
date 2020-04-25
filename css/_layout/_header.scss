@@ -8,33 +8,62 @@
 ________________________________________________________*/
 
 header {
-    @include flex-column;
-    align-items: center;
-    margin-top: 52px;
-    width: 100vw;
-    height: 45vh;
-    background-image: url(../images/header/header-640.jpg);
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    position: relative;
 
-    @include breakpoint-min(768) {
-        background-image: url(../images/header/header-960.jpg);
-        height: 80vh;
-    }
+    &>a {
+        width: 100%;
 
-    @include breakpoint-min(1366) {
-        background-image: url(../images/header/header-1800.jpg);
-        height: 90vh;
-    }
+        /*[Logo desktop]*/
+        & .logo-desktop {
+            z-index: 2;
+            display: none;
+            transition: box-shadow .5s;
 
-    /*[Logo desktop]*/
-    & img {
-        display: none;
+            @include breakpoint-min(1366) {
+                display: block;
+                width: 40vw;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute;
+                top: 60px;
+            }
+        }
 
         @include breakpoint-min(1366) {
-            display: flex;
-            width: 40vw;
-            margin-top: 3rem;
+            & .logo-desktop:hover {
+                box-shadow: 0px 5px 15px var(--noir);
+            }
+        }
+    }
+
+    &>a:hover+.header-bg {
+        filter: blur(3px);
+    }
+
+    /*[Image de fond du header]*/
+    &>.header-bg {
+        z-index: 1;
+        margin-top: 52px;
+        width: 100%;
+        height: 45vh;
+        background-image: url(../images/header/header-640.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: blur(0px);
+        transition: filter .5s;
+
+        @include breakpoint-min(768) {
+            background-image: url(../images/header/header-960.jpg);
+            height: 80vh;
+        }
+
+        @include breakpoint-min(1366) {
+            background-image: url(../images/header/header-1800.jpg);
+            background-attachment: fixed;
+            height: 90vh;
         }
     }
 }
