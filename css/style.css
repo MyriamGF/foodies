@@ -423,6 +423,8 @@ ________________________________________________________*/
 header {
   width: 100%;
   position: relative;
+  background-color: var(--noir);
+  /*[Fond devient flou quand hover sur logo]*/
   /*[Image de fond du header]*/
 }
 
@@ -434,10 +436,6 @@ header > a {
 header > a .logo-desktop {
   z-index: 2;
   display: none;
-  -webkit-transition: -webkit-box-shadow .5s;
-  transition: -webkit-box-shadow .5s;
-  transition: box-shadow .5s;
-  transition: box-shadow .5s, -webkit-box-shadow .5s;
 }
 
 @media (min-width: 1366px) {
@@ -453,16 +451,9 @@ header > a .logo-desktop {
   }
 }
 
-@media (min-width: 1366px) {
-  header > a .logo-desktop:hover {
-    -webkit-box-shadow: 0px 5px 15px var(--noir);
-            box-shadow: 0px 5px 15px var(--noir);
-  }
-}
-
 header > a:hover + .header-bg {
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
+  -webkit-filter: blur(5px) brightness(80%);
+          filter: blur(5px) brightness(80%);
 }
 
 header > .header-bg {
